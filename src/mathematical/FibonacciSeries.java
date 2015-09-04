@@ -1,0 +1,37 @@
+package mathematical;
+
+import java.util.Scanner;
+
+public class FibonacciSeries {
+
+	public static void main(String[] args) {
+
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the value for n:");
+		int n = s.nextInt();
+		
+		fibonacci(n);
+		
+	}
+	
+	public static void fibonacci(int n){
+		if(n==0){
+			System.out.println("0");
+		}else if(n==1){
+			System.out.println("0 1");
+		}else {
+		
+			System.out.print("0 1 ");
+			int a = 0;
+			int b = 1;
+			for (int i = 1; i < n; i++){
+				int nextnumber = a+b;
+				System.out.print(nextnumber + " ");
+				a = b;
+				b = nextnumber;
+			}
+		}
+		
+	}
+
+}
